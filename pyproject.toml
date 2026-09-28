@@ -1,0 +1,10 @@
+[project]
+name = "proyecto-multiagente"
+version = "0.1.0"
+description = "Sistema multiagente mínimo: orquestador y agentes especializados"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
