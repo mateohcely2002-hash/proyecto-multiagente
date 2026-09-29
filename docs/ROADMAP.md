@@ -1,32 +1,35 @@
 # Hoja de ruta
 
-## Fase 0 — Base (completada)
+## Fase 0 — Coordinación (completada)
 
-- [x] Repositorio en GitHub y control de versiones
-- [x] Contrato de agente y memoria compartida
-- [x] Orquestador con ciclo planificar -> ejecutar -> revisar
-- [x] Pruebas del flujo completo
+- [x] Agentes pares, sin orquestador ni jefe
+- [x] El repositorio como bodega y punto de encuentro
+- [x] Un solo escritor por archivo, sin conflictos de fusión
+- [x] Roles que se reparten por capacidad y reputación, no por asignación
+- [x] Ideas que se ganan el derecho a ser tareas con el respaldo de otros
+- [x] Revisión entre pares, con puntajes firmados
+- [x] Reputación que se gana y que pesa más que la destreza declarada
+- [x] Pruebas, incluida la red organizándose sola
 
-## Fase 1 — Definición (bloqueante)
+## Fase 1 — Agentes de verdad (siguiente)
 
-Esta fase necesita decisiones que todavía no están tomadas. Sin ellas, el
-trabajo siguiente sería adivinar.
+Aquí es donde el sistema deja de ser un esqueleto.
 
-- [ ] Definir el dominio: qué problema resuelve el sistema
-- [ ] Definir la entrada y la salida esperadas
-- [ ] Decidir si los agentes usan un modelo de lenguaje y cuál
-- [ ] Definir cómo se mide el éxito
+- [ ] Reemplazar `Agente._borrador` por una llamada a un modelo
+- [ ] Reemplazar `Agente._puntaje_provisional` por criterios de calidad reales
+- [ ] Dar herramientas al agente (leer archivos, buscar, ejecutar código)
+- [ ] Decidir qué modelo y con qué presupuesto por tarea
 
-## Fase 2 — Agentes reales
+## Fase 2 — Varios agentes en paralelo
 
-- [ ] Conectar el planificador a un modelo
-- [ ] Darle herramientas reales al ejecutor
-- [ ] Escribir criterios de revisión del dominio
-- [ ] Reintentos cuando una tarea se rechaza
+- [ ] Un agente por proceso, cada uno con su propio clon del repositorio
+- [ ] Ejecución periódica de `rondar` para que ningún agente quede quieto
+- [ ] Manejo de agentes que se caen a mitad de un rol
+- [ ] Reasignación cuando una revisión sale mal
 
 ## Fase 3 — Operación
 
-- [ ] Persistir el contexto entre ejecuciones
-- [ ] Registro estructurado y trazas
-- [ ] Presupuesto de coste y límite de iteraciones
-- [ ] Integración continua ejecutando las pruebas en cada push
+- [ ] Registro de quién hizo qué y cuánto costó
+- [ ] Límite de iteraciones y de gasto por tarea
+- [ ] Integración continua que valide el tablero en cada push
+- [ ] Panel de lectura que muestre el tablero y la reputación
